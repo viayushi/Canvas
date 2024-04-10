@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="draw.css">
+    <title>Canvas</title>
+</head>
+<body>
+    <div class="container">
+        <section class="tool-board">
+            <div class="row">
+                <label class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <i class='bx bx-rectangle'></i>
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <i class='bx bx-circle'></i>
+                        <span>Circle</span>
+                    </li>
+                    <li class="option tool" id="square">
+                        <i class='bx bx-square'></i>
+                        <span>square</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <i class='bx bx-shape-triangle'></i>
+                        <span>Triangle</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill color</label>
+                    </li>
+                    <!-- <br> -->
+                </ul>
+            </div>
+
+            <div class="row">
+                <label class="title">Options</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush">
+                        <i class='bx bxs-paint'></i>
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <i class='bx bxs-eraser' ></i>
+                        <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="40" value="2">
+                    </li>
+                    <!-- <br> -->
+                </ul>
+            </div>
+
+            <div class="row colors">
+                <label class="title">Colors</label>
+                <ul class="options colors">
+                    <li class="option" ></li>
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" id="color-picker" value="#ddac0a">
+                    </li>
+                </ul>
+            </div>
+            <div class="tool-board row last button">
+                <button class="clear-canvas">Clear Canvas</button>
+                <button class="Save-img">Save</button>
+            </div>
+        </section>
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+
+    </div>
+</body>
+<script src="draw.js" defer>
+</script>
+</html>
